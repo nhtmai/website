@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mai Nguyen</title>
+        <link rel="stylesheet" href="output.css">
+    </head>
+    <body onload="changeProject('p1', 'Polaroid Poster Maker', 'Python, Flask, HTML/CSS')">
+        <div id="nav_box">
+            <a class="nav_link" href="#about">about</a>
+            <a class="nav_link" href="#projects">projects</a>
+            <a class="nav_link" href="#contact">contact</a>
+        </div>
+        <div id="header" class="section">
+            <img src="https://i.pinimg.com/564x/b3/d1/02/b3d102ab57983f4d22fb560fb05062d1.jpg">
+            <div>
+                <h2>Hi! My name is</h2>
+                <h1>Mai Nguyen.</h1>
+                <p>
+                I am a second-year computer science student currently attending the University of Waterloo.
+                </p>
+            </div>
+        </div>
+        <div id="about" class="section">
+            <h1 class="section_header">
+                about
+            </h1>
+            <div id="about_content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perferendis minus est iste laborum, assumenda sapiente animi beatae at temporibus vel, quis quas delectus. Saepe aperiam voluptatem neque inventore. Fugit.
+                   Officiis, saepe pariatur nulla sint odio iste aspernatur, quod dolor amet porro voluptates harum voluptatibus? Ipsa quo voluptates in officiis rem et.
+                </p>
+                <div id="languages">
+                    <h3 class="about_title">languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>HTML/CSS</li>
+                        <li>Javascript</li>
+                    </ul>
+                </div>
+                <div id="tech">
+                    <h3 class="about_title">tech</h3>
+                    <ul>
+                        <li>Django</li>
+                        <li>Vue.js</li>
+                        <li>Github</li>
+                        <li>Flask</li>
+                    </ul>
+                </div>
+                <div id="hobbies">
+                    <h3 class="about_title">hobbies</h3>
+                    <ul>
+                        <li>movies</li>
+                        <li>trivia</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="projects" class="section">
+            <h1 class="section_header">
+                projects
+            </h1>
+            <div id="projects_content">
+                <ul id="proj_menu">
+                    <li class="p1" onclick="changeProject('p1', 'Polaroid Poster Maker', 'Python, Flask, HTML/CSS')">Polaroid Poster Maker</li>
+                    <li class="p2" onclick="changeProject('p2', 'Movie Tracker', 'Python, Django, HTML/CSS')">Movie Tracker</li>
+                    <li class="p3" onclick="changeProject('p3', 'Personal Website', 'HTML/CSS, Javascript')">Personal Website</li>
+                </ul>
+                <div id="proj_details">
+                    <h3 id="proj_name" class="about_title">Click a project!</h3>
+                    <p id="proj_tech">Python, Flask</p>
+                    <ul class="p1" style="display: none;">
+                        <li>Polaroid Poster Maker</li>
+                        <li>Mollitia soluta vero perspiciatis voluptates asperiores sed rerum commodi sunt nemo ad distinctio illum, numquam a voluptate rem.</li>
+                        <li>Numquam, vero. Nulla quos eius, blanditiis cupiditate aut culpa nam error perspiciatis voluptate, ab impedit.</li>
+                        <li>Commodi repellat beatae dolore voluptas accusamus eligendi!</li>
+                    </ul>
+                    <ul class="p2" style="display: none;">
+                        <li>Movie Tracker</li>
+                        <li>Mollitia soluta vero perspiciatis voluptates asperiores sed rerum commodi sunt nemo ad distinctio illum, numquam a voluptate rem.</li>
+                        <li>Numquam, vero. Nulla quos eius, blanditiis cupiditate aut culpa nam error perspiciatis voluptate, ab impedit.</li>
+                        <li>Commodi repellat beatae dolore voluptas accusamus eligendi!</li>
+                    </ul>
+                    <ul class="p3" style="display: none;">
+                        <li>Personal Website</li>
+                        <li>Mollitia soluta vero perspiciatis voluptates asperiores sed rerum commodi sunt nemo ad distinctio illum, numquam a voluptate rem.</li>
+                        <li>Numquam, vero. Nulla quos eius, blanditiis cupiditate aut culpa nam error perspiciatis voluptate, ab impedit.</li>
+                        <li>Commodi repellat beatae dolore voluptas accusamus eligendi!</li>
+                    </ul>
+                    <ul id="proj_desc">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="contact" class="section">
+            <h1 class="section_header">
+                contact
+            </h1>
+            <ul>
+                <li>LinkdIn</li>
+                <li>GitHub</li>
+                <li>Email</li>
+            </ul>
+        </div>
+        <div id="footer">
+            Made with 💖 by Mai
+        </div>
+    </body>
+    <script src="script.js"></script> 
+</html>

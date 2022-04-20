@@ -1,0 +1,168 @@
+/*
+FONTS:
+font-family: 'Playfair Display', serif;
+font-family: 'DM Sans', sans-serif;
+https://fonts.google.com/specimen/Playfair+Display?query=playfair&preview.text=Mai%20Nguyen&preview.text_type=custom#standard-styles
+
+COLOURS:
+$olive-drab: #373125;
+$pale-silver: #C9C2B3;
+$baby-blue: #D1E1E1;
+$linen: #F3EBE1;
+$vegas-gold: #C6B452;
+$spanish-bistro: #8A813E;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    background-color: #F3EBE1;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    width: 1200px;
+    margin: auto;
+}
+
+#nav_box{
+    text-align: center;
+    margin: 10px;
+}
+
+.nav_link{
+    display: inline-block;
+    padding: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    color: #373125;
+    text-decoration: none;
+}
+
+.nav_link:hover {
+    color: #8A813E;
+}
+
+#header {
+    display: flex;
+    flex-grow: 1;
+    margin-top: 50px;
+}
+
+#header h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 115px;
+    font-style: italic;
+    width: 100%;
+    margin: 0px;
+    margin-top: -15px;
+    padding: 0px;
+}
+
+#header h2 {
+    font-weight: 400;
+    font-size: 20px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#header img {
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+    object-position: 0 100%;
+    margin: 0px;
+}
+
+#header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0px;
+    float: right;
+    padding: 60px;
+    padding-bottom: 0;
+    padding-right: 0;
+}
+
+.section_header {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 40px;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.section {
+    margin-bottom: 100px;
+}
+
+.section p {
+    margin: 0; 
+}
+
+#about_content {
+    display: flex;
+}
+
+#about_content div{
+    margin-left: 150px;
+}
+
+.about_title{
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+#about_content ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#projects_content {
+    display: flex;
+}
+
+#proj_menu {
+    padding: 0;
+    margin: 0;
+    width: 25%;
+    list-style-type: none;
+}
+
+#proj_menu li{
+    display: block;
+    margin: 20px;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+#proj_menu li:hover{
+    color: #8A813E;
+    cursor: pointer;
+}
+
+#proj_tech {
+    font-size: 15px;
+    color: #8A813E;
+}
+
+#contact ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#contact li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#footer {
+    display: block;
+    padding: 50px;
+    text-align: center;
+}
