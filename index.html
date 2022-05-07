@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Mai Nguyen</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="output.css">
         <link rel="icon" href="/images/website-icon.png">
     </head>
@@ -23,35 +24,47 @@
                 about
             </h1>
             <div id="about_content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perferendis minus est iste laborum, assumenda sapiente animi beatae at temporibus vel, quis quas delectus. Saepe aperiam voluptatem neque inventore. Fugit.
+                <p id="about_blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid perferendis minus est iste laborum, assumenda sapiente animi beatae at temporibus vel, quis quas delectus. Saepe aperiam voluptatem neque inventore. Fugit.
                    Officiis, saepe pariatur nulla sint odio iste aspernatur, quod dolor amet porro voluptates harum voluptatibus? Ipsa quo voluptates in officiis rem et.
+                    <br /> 
+                    <a href="">resume</a>
                 </p>
-                <div id="languages">
-                    <h3 class="about_title">languages</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>C</li>
-                        <li>C++</li>
-                        <li>Java</li>
-                        <li>HTML/CSS</li>
-                        <li>Javascript</li>
-                    </ul>
-                </div>
-                <div id="tech">
-                    <h3 class="about_title">tech</h3>
-                    <ul>
-                        <li>Django</li>
-                        <li>Vue.js</li>
-                        <li>Github</li>
-                        <li>Flask</li>
-                    </ul>
-                </div>
-                <div id="hobbies">
-                    <h3 class="about_title">hobbies</h3>
-                    <ul>
-                        <li>movies</li>
-                        <li>trivia</li>
-                    </ul>
+                <div id="about_bullets" style="flex-grow: 1;">
+                    <div id="languages">
+                        <h3 class="about_title">languages</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>C</li>
+                            <li>C++</li>
+                            <li>Java</li>
+                            <li>HTML/CSS</li>
+                            <li>Javascript</li>
+                            <li>Racket</li>
+                        </ul>
+                    </div>
+                    <div id="tech">
+                        <h3 class="about_title">tech</h3>
+                        <ul>
+                            <li>Django</li>
+                            <li>Flask</li>
+                            <li>NodeJS</li>
+                            <li>ReactJS</li>
+                            <li>GIT</li>
+                            <li>Heroku</li>
+                            <li>Linux</li>
+                            <li>Nano</li>
+                        </ul>
+                    </div>
+                    <div id="hobbies">
+                        <h3 class="about_title">hobbies</h3>
+                        <ul>
+                            <li>movies</li>
+                            <li>art</li>
+                            <li>badminton</li>
+                            <li>gardening</li>
+                            <li>trivia</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -60,31 +73,29 @@
                 projects
             </h1>
             <div id="projects_content">
-                <ul id="proj_menu">
+                <ul id="proj_menu" style="max-width: 250px;">
                     <li class="p1" onclick="changeProject('p1', 'Polaroid Poster Maker', 'Python, Flask, HTML/CSS')">Polaroid Poster Maker</li>
-                    <li class="p2" onclick="changeProject('p2', 'Movie Tracker', 'Python, Django, HTML/CSS')">Movie Tracker</li>
-                    <li class="p3" onclick="changeProject('p3', 'Personal Website', 'HTML/CSS, Javascript')">Personal Website</li>
+                    <li class="p2" onclick="changeProject('p2', 'To Do Chrome Tracker', 'Javascript, ReactJS, HTML/CSS')">To Do Chrome Extension</li>
+                    <li class="p3" onclick="changeProject('p3', 'Movie Tracker', 'Python, Django, HTML/CSS')">Movie Tracker</li>
                 </ul>
-                <div id="proj_details">
+                <div id="proj_details" style="flex-grow: 2; flex-shrink: 2; flex-basis: 500px;">
                     <h3 id="proj_name" class="about_title">Click a project!</h3>
-                    <p id="proj_tech">Python, Flask</p>
+                    <p id="proj_tech">Python, Flask, IMDBpy, PIL, Heroku, Github</p>
                     <ul class="p1" style="display: none;">
-                        <li>Polaroid Poster Maker</li>
-                        <li>Mollitia soluta vero perspiciatis voluptates asperiores sed rerum commodi sunt nemo ad distinctio illum, numquam a voluptate rem.</li>
-                        <li>Numquam, vero. Nulla quos eius, blanditiis cupiditate aut culpa nam error perspiciatis voluptate, ab impedit.</li>
-                        <li>Commodi repellat beatae dolore voluptas accusamus eligendi!</li>
+                        <li>Users can create trendy polaroid posters by searching for a movie, and the program generates a poster based on
+                        the desired parameters with Flask, IMDBpy, and PIL</li>
+                        <li>Planned and implemented UX/UI with HTML and CSS to appeal to the target user demographic</li>
+                        <li>Web application deployed using Heroku and Github</li>
                     </ul>
                     <ul class="p2" style="display: none;">
-                        <li>Movie Tracker</li>
-                        <li>Mollitia soluta vero perspiciatis voluptates asperiores sed rerum commodi sunt nemo ad distinctio illum, numquam a voluptate rem.</li>
-                        <li>Numquam, vero. Nulla quos eius, blanditiis cupiditate aut culpa nam error perspiciatis voluptate, ab impedit.</li>
-                        <li>Commodi repellat beatae dolore voluptas accusamus eligendi!</li>
+                        <li>Chrome extension tracking time and manages tasks entered by user, maintaining data after user session has ended</li>
+                        <li>User data managed using localStorage, and front-end user interface implemented using ReactJS</li>
                     </ul>
                     <ul class="p3" style="display: none;">
-                        <li>Personal Website</li>
-                        <li>Mollitia soluta vero perspiciatis voluptates asperiores sed rerum commodi sunt nemo ad distinctio illum, numquam a voluptate rem.</li>
-                        <li>Numquam, vero. Nulla quos eius, blanditiis cupiditate aut culpa nam error perspiciatis voluptate, ab impedit.</li>
-                        <li>Commodi repellat beatae dolore voluptas accusamus eligendi!</li>
+                        <li>Used to track when the user watched a movie, how they rate it, and leave a review</li>
+                        <li>Assembled HTML/CSS front-end user interface with back-end models using Django, and generated movie data
+                            and enable user input</li>
+                        <li>Used IMDBpy to implement search bars and display results</li>
                     </ul>
                     <ul id="proj_desc">
                     </ul>
@@ -96,7 +107,7 @@
                 contact
             </h1>
             <ul>
-                <li>LinkdIn</li>
+                <li>LinkedIn</li>
                 <li>GitHub</li>
                 <li>Email</li>
             </ul>

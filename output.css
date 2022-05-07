@@ -15,6 +15,21 @@ $spanish-bistro: #8A813E;
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@media (max-width: 1025px) {
+    #about_blurb {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width: 1026px) {
+    #about_blurb {
+        width: 500px;
+        margin-right: 50px;
+        margin-bottom: 50px;
+    }
+}
+
 body{
     background-color: #F3EBE1;
     font-family: 'DM Sans', sans-serif;
@@ -22,6 +37,28 @@ body{
     width: 80%;
     max-width: 1200px;
     margin: auto;
+}
+
+.section_header {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 40px;
+    margin: 0;
+    margin-bottom: 25px;
+    padding-top: 25px;
+}
+
+.about_title{
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+#about_content ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 #nav_box{
@@ -45,11 +82,12 @@ body{
 #header h1 {
     font-family: 'Playfair Display', serif;
     font-weight: 600;
-    font-size: 115px;
+    font-size: 20vmin;
+    line-height: 1em;
     font-style: italic;
     width: 100%;
     margin: 0px;
-    margin-top: -15px;
+    margin-bottom: 20px;
     padding: 0px;
 }
 
@@ -66,18 +104,9 @@ body{
     flex-direction: column;
     justify-content: flex-end;
     height: 75vh;
+    max-height: 500px;
     margin: 0px;
     margin-bottom: 50px;
-}
-
-.section_header {
-    font-family: "Playfair Display", serif;
-    font-style: italic;
-    font-weight: 700;
-    font-size: 40px;
-    margin: 0;
-    margin-bottom: 25px;
-    padding-top: 25px;
 }
 
 .section {
@@ -90,33 +119,25 @@ body{
 
 #about_content {
     display: flex;
+    flex-wrap: wrap;
 }
 
-#about_content div{
-    margin-left: 100px;
-}
-
-.about_title{
-    margin: 0;
-    margin-bottom: 5px;
-    padding: 0;
-}
-
-#about_content ul{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+#about_bullets {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 #projects_content {
     display: flex;
+    flex-wrap: wrap;
 }
 
 #proj_menu {
     padding: 0;
     margin: 0;
-    width: 25%;
     list-style-type: none;
+    flex-grow: 1;
 }
 
 #proj_menu li{
@@ -143,8 +164,8 @@ body{
 }
 
 #contact li {
-    display: block;
-    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 30px;
 }
 
 #footer {
