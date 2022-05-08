@@ -105,7 +105,7 @@ body{
 #header h1 {
     font-family: 'Playfair Display', serif;
     font-weight: 600;
-    font-size: 20vmin;
+    font-size: min(20vmin, 150px);
     line-height: 1em;
     font-style: italic;
     width: 100%;
