@@ -15,27 +15,50 @@ $spanish-bistro: #8A813E;
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@media (max-width: 1025px) {
-    #about_blurb {
-        width: 100%;
+@media only screen and (max-width: 1000px) {
+    .space {
+        width: 0;
         margin-bottom: 50px;
     }
+
+    #projects_content {
+        display: none;
+    }
+
+    #proj_menu {
+        min-width: 300px;
+        display: block;
+    }
+
+    #proj_details {
+        min-width: 100px;
+    }
+
+    
 }
 
-@media (min-width: 1026px) {
-    #about_blurb {
-        width: 500px;
-        margin-right: 50px;
+@media only screen and (min-width: 1001px) {
+    .space {
+        width: 300px;
         margin-bottom: 50px;
     }
+    
+    #contact ul {
+        margin-left: 300px;
+    }
+
+    #proj_details {
+        width: calc(100% - 300px);
+    }
+
 }
 
 body{
     background-color: #F3EBE1;
     font-family: 'DM Sans', sans-serif;
     font-size: 18px;
-    width: 80%;
-    max-width: 1200px;
+    width: 70%;
+    max-width: 900px;
     margin: auto;
 }
 
@@ -110,7 +133,7 @@ body{
 }
 
 .section {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .section p {
@@ -136,8 +159,8 @@ body{
 #proj_menu {
     padding: 0;
     margin: 0;
+    width: 300px;
     list-style-type: none;
-    flex-grow: 1;
 }
 
 #proj_menu li{
@@ -172,4 +195,13 @@ body{
     display: block;
     padding: 50px;
     text-align: center;
+}
+
+.links, .links:visited {
+    color: #373125;
+    text-decoration: none;
+}
+
+.links:focus {
+    color: #8A813E;
 }
