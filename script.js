@@ -1,24 +1,26 @@
-function changeProject(proj_class, proj_name, proj_tech) {
-    resetMenu();
+function changeProject(proj_class, proj_name, proj_date) {
+    // remove stars
+    const stars = document.getElementsByClassName("prjt_selected");
+    const len = stars.length;
+    for (let i = 0; i < len; i++) {
+        stars[0].remove();
+    }
 
+    // add space
+    const menuItems = document.getElementById("prjts_menu").childNodes;
+    for (const item of menuItems) {
+        if (item.tagName === "LI") {
+            item.style.marginLeft = "30px";
+            item.style.marginRight = "30px";
+        }
+    } 
+
+    // add stars
     const classItems = document.getElementsByClassName(proj_class);
-    document.getElementById("proj_desc").innerHTML = classItems[1].innerHTML;
-    classItems[0].style.textDecoration = 'underline';
-    classItems[0].style.color = '#8A813E';
-    document.getElementById("proj_name").innerHTML = proj_name;
-    document.getElementById("proj_tech").innerHTML = proj_tech;
-}
 
-function resetMenu() {
-    const classItems1 = document.getElementsByClassName("p1");
-    const classItems2 = document.getElementsByClassName("p2");
-    const classItems3 = document.getElementsByClassName("p3");
-
-    classItems1[0].style.textDecoration = 'none';
-    classItems2[0].style.textDecoration = 'none';
-    classItems3[0].style.textDecoration = 'none';
-
-    classItems1[0].style.color = '#373125';
-    classItems2[0].style.color = '#373125';
-    classItems3[0].style.color = '#373125';
+    document.getElementById("prjt_desc").getElementsByTagName("ul")[0].innerHTML = classItems[1].innerHTML;
+    document.getElementById("prjt_name").innerHTML = proj_name;
+    classItems[0].style.margin = "0";
+    classItems[0].innerHTML = "<img class='prjt_selected' src='style/images/small star (1).png'>" + classItems[0].innerHTML + "<img class='prjt_selected' src='style/images/small star (2).png'>";
+    document.getElementById("prjt_date").innerHTML = proj_date;
 }
