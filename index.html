@@ -4,8 +4,9 @@
         <title>Mai Nguyen</title>
         <link rel="stylesheet" href="style/style.css" />
         <link rel="icon" href="style/images/big star (1).png">
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
-    <body onload="changeProject('p1', 'QA Engineer Co-op @ FlexJourney', 'Sept \'22 - Now')">
+    <body x-data="onInit">
         <div class="images">
             <img class="big" id="big_heart" src="style/images/big heart (1).png">
             <img class="big" id="big_smiley" src="style/images/big smiley.png">
@@ -49,10 +50,10 @@
                 <div class="list">
                     <div>Languages I know:</div>
                     <ul>
+                        <li>Python</li>
                         <li>Javascript + Typescript</li>
                         <li>C</li>
                         <li>C++</li>
-                        <li>Python</li>
                         <li>Java</li>
                         <li>HTML/CSS</li>
                     </ul>
@@ -60,6 +61,7 @@
                 <div class="list">
                     <div>Technologies I know:</div>
                     <ul>
+                        <li>Django</li>
                         <li>MongoDB</li>
                         <li>Express</li>
                         <li>React</li>
@@ -67,7 +69,6 @@
                         <li>Cypress JS</li>
                         <li>Postman</li>
                         <li>Flask</li>
-                        <li>Django</li>
                         <li>Linux</li>
                         <li>GIT/Github</li>
                         <li>Figma</li>
@@ -76,7 +77,7 @@
                 <div class="list">
                     <div>My hobbies:</div>
                     <ul>
-                        <li>watch movies (check out my LetterBoxd!)</li>
+                        <li>watching movies</li>
                         <li>trivia and logic games</li>
                         <li>listening to music</li>
                     </ul>
@@ -89,40 +90,29 @@
             </div>
             <div id="projects_content">
                 <ul id="prjts_menu">
-                    <li class="p1" onclick="changeProject('p1', 'QA Engineer Co-op @ FlexJourney', 'Sept \'22 - Now')">QA Engineer Co-op</li>
-                    <li class="p2" onclick="changeProject('p2', 'Polaroid Poster Maker', 'Jan \'21')">Polaroid Poster Maker</li>
-                    <li class="p3" onclick="changeProject('p3', 'Movie Tracker', 'Jan \'22')">Movie Tracker</li>
+                    <template x-for="(section, index) in data">
+                        <li @click="curSection = index">
+                            <img src='style/images/small star (1).png' x-show="index == curSection">
+                            <span x-text="section.name"></span>
+                            <img src='style/images/small star (1).png' x-show="index == curSection">
+                        </li>
+                    </template>
                     <li><a href="https://github.com/nhtmai" style="text-decoration: none">Other</a></li>
                 </ul>
-                <div id="prjt" >
-                    <div id="prjt_header">
-                        <h3 id="prjt_name"></h3>
-                        <div class="break"></div>
-                        <p id="prjt_date"></p>
-                    </div>
-                    <ul class="p1" style="display: none;">
-                        <li>Collaborated with other QA engineers and developers to develop testing plans and find system vulnerabilities</li>
-                        <li>Wrote 50+ tests with Cypress JS and documented results in TestRail</li>
-                        <li>Designed and implemented 2 client-facing features with MERN stack and Typescript for a SAAS application</li>
-                        <li>Operated in an Agile environment and participated in code reviews and scrum meetings</li>
-                    </ul>
-                    <ul class="p2" style="display: none;">
-                        <li>Users can create trendy polaroid posters by searching for a movie, and the program will generate a poster based
-                            on the desired parameters with Flask, IMDBpy, and PIL</li>
-                        <li>Planned and implemented UX/UI with HTML and CSS to appeal to the target user demographic, and deployed
-                            using Heroku and Github</li>
-                        <li>Posters generated have been saved collectively +40 times on Pinterest</li>
-                    </ul>
-                    <ul class="p3" style="display: none;">
-                        <li>Used to track when the user watched a movie, how they rate it, and leave a review</li>
-                        <li>Assembled HTML/CSS front-end user interface with back-end models using Django, and generated movie data
-                            and enable user input</li>
-                        <li>Used IMDBpy to implement search bars and display results</li>
-                    </ul>
-                    <div id="prjt_desc">
-                        <ul>
-                        </ul>
-                    </div>
+                <div id="prjt">
+                    <template x-for="entry in data[curSection].entries">
+                        <div class="prjt_section">
+                            <div class="prjt_header">
+                                <h3 class="prjt_name" x-text="entry.name"></h3>
+                                <p class="prjt_date"  x-text="entry.date"></p>
+                            </div>
+                            <div class="prjt_desc">
+                                <template x-for="point in entry.points">
+                                    <li x-text="point"></li>
+                                </template>
+                            </div>
+                        </div>
+                    </template>
                 </div>
             </div>
         </div>
@@ -133,5 +123,66 @@
         </div>
         <div class="footer">Made with 💖 by Mai Nguyen</div>
     </body>
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('onInit', () => ({
+                data: [
+                    {
+                        name: "Software Developer",
+                        entries: [
+                            {
+                                "name": "Blendable",
+                                "date": "May '23 - Present",
+                                "points": [
+                                    "Developed database model and migrated data to facilitate future features and refine current processes",
+                                    "Demoed new updates to staffs and administrators monthly, and refined them accordingly to comments",
+                                    "Updated UI/UX for templates and built widgets for client-facing website with Django, Sass, and Alpine.js",
+                                    "Optimized PostgreSQL database queries with Django’s database-abstraction API"
+                                ]
+                            },
+                            {
+                                "name": "FlexJourney",
+                                "date": "Dec '22 - Apr '23",
+                                "points": [
+                                    "Designed 2 features for a SaaS application with Figma to prioritize user experience, and developed them with MERN stack and REST API",
+                                    "Examined and updated 3+ outdated features to integrate with new technologies and features",
+                                    "Created detailed documentation on Jira and Confluence for new features with UMLs/sequence diagrams, and adjusted old documentation to streamline the development process for other developers",
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        name: "Quality Engineer",
+                        entries: [
+                            {
+                                "name": "FlexJourney",
+                                "date": "Sep '22 - Dec '22",
+                                "points": [
+                                    "Collaborated with other QA engineers and developers to develop testing plans and find system vulnerabilities",
+                                    "Wrote 50+ tests with Cypress JS and documented results in TestRail",
+                                    "Designed and implemented 2 client-facing features with MERN stack and Typescript for a SAAS application",
+                                    "Operated in an Agile environment and participated in code reviews and scrum meetings"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        name: "Projects",
+                        entries: [
+                            {
+                                "name": "Polaroid Poster Maker",
+                                "date": "Jan '21",
+                                "points": [
+                                    "Used to track when the user watched a movie, how they rate it, and leave a review",
+                                    "Assembled HTML/CSS front-end user interface with back-end models using Django to generated movie data and enable user input",
+                                    "Used IMDBpy to implement search bars and display results"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                curSection: 0,
+            }))
+        })
+    </script>
 </html>
