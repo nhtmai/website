@@ -24,15 +24,9 @@
             <img class="small" id="small_dot1" src="style/images/blue dot (2).png">
             <img class="small" id="small_dot2" src="style/images/blue dot (2).png">
             <img class="small" id="small_smiley" src="style/images/big smiley.png">
-            <img class="small" id="small_sparkle4" src="style/images/big sparkle (1).png">
-            <img class="small" id="small_sparkle5" src="style/images/small sparkle (1).png">
-            <img class="big" id="big_star2" src="style/images/big star (1).png">
-            <img class="small" id="small_heart5" src="style/images/small heart (2).png">
-            <img class="small" id="small_heart6" src="style/images/small heart (1).png">
         </div>
         <ul id="navbar">
             <li><a href="#about">about</a></li>
-            <li><a href="#projects-and-experience">projects + experience</a></li>
             <li><a href="#contact">contact</a></li>
         </ul>
         <div class="intro">
@@ -46,75 +40,7 @@
                 About Me
             </div>
             <div>I am a computer science student studying at the University of Waterloo, and an aspiring full-stack developer.</div>
-            <div id="list-section">
-                <div class="list">
-                    <div>Languages I know:</div>
-                    <ul>
-                        <li>Python</li>
-                        <li>Javascript + Typescript</li>
-                        <li>C</li>
-                        <li>C++</li>
-                        <li>Java</li>
-                        <li>HTML/CSS</li>
-                    </ul>
-                </div>
-                <div class="list">
-                    <div>Technologies I know:</div>
-                    <ul>
-                        <li>Django</li>
-                        <li>MongoDB</li>
-                        <li>Express</li>
-                        <li>React</li>
-                        <li>Node.js</li>
-                        <li>Cypress JS</li>
-                        <li>Postman</li>
-                        <li>Flask</li>
-                        <li>Linux</li>
-                        <li>GIT/Github</li>
-                        <li>Figma</li>
-                    </ul>
-                </div>
-                <div class="list">
-                    <div>My hobbies:</div>
-                    <ul>
-                        <li>watching movies</li>
-                        <li>trivia and logic games</li>
-                        <li>listening to music</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="section" id="projects-and-experience">
-            <div class="section-label">
-                Projects and Experience
-            </div>
-            <div id="projects_content">
-                <ul id="prjts_menu">
-                    <template x-for="(section, index) in data">
-                        <li @click="curSection = index">
-                            <img src='style/images/small star (1).png' x-show="index == curSection">
-                            <span x-text="section.name"></span>
-                            <img src='style/images/small star (1).png' x-show="index == curSection">
-                        </li>
-                    </template>
-                    <li><a href="https://github.com/nhtmai" style="text-decoration: none">Other</a></li>
-                </ul>
-                <div id="prjt">
-                    <template x-for="entry in data[curSection].entries">
-                        <div class="prjt_section">
-                            <div class="prjt_header">
-                                <h3 class="prjt_name" x-text="entry.name"></h3>
-                                <p class="prjt_date"  x-text="entry.date"></p>
-                            </div>
-                            <div class="prjt_desc">
-                                <template x-for="point in entry.points">
-                                    <li x-text="point"></li>
-                                </template>
-                            </div>
-                        </div>
-                    </template>
-                </div>
-            </div>
+            <div><b>My resume:</b> <a href="resume.pdf">resume.pdf</a></div>
         </div>
         <div class="section" id="contact">
             <div class="section-label">Contact</div>
