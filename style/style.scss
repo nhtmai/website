@@ -92,7 +92,7 @@ a {
     text-align: center;
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 0;
     max-width: 750px;
     margin: auto;
@@ -252,28 +252,28 @@ a {
 #small_dot {
     width: 20px;
     left: calc(50vw - 350px);
-    top: 160vh;
+    top: 175vh;
     animation: 0.5s tick1 infinite steps(1);
 }
 
 #small_dot1 {
     width: 20px;
     left: calc(50vw - 325px);
-    top: 162vh;
+    top: 177vh;
     animation: 0.5s tick1 infinite steps(1);
 }
 
 #small_dot2 {
     width: 20px;
     left: calc(50vw - 350px);
-    top: 165vh;
+    top: 180vh;
     animation: 0.5s tick2 infinite steps(1);
 }
 
 #small_smiley {
     width: 20vh;
     left: calc(50vw - 525px);
-    top: 170vh;
+    top: 177vh;
     animation: 0.5s tick3 infinite steps(1);
 }
 
