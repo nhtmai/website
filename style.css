@@ -47,7 +47,7 @@ body {
   position: relative;
   margin-bottom: -0.2em;
   text-align: center;
-  font-size: clamp(10rem, 25vw, 15rem);
+  font-size: clamp(5rem, 25vw, 25rem);
 }
 
 .letter {
