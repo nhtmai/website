@@ -30,7 +30,6 @@ body {
 
 .name {
   font-family: 'TerminalGrotesque', sans-serif;
-  font-size: clamp(12rem, 30vw, 25rem);
   font-weight: 500;
   color: #000;
   line-height: 0.8;
@@ -48,7 +47,7 @@ body {
   position: relative;
   margin-bottom: -0.2em;
   text-align: center;
-  font-size: clamp(10rem, 25vw, 20rem);
+  font-size: clamp(10rem, 25vw, 15rem);
 }
 
 .letter {
@@ -68,18 +67,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
   color: #666;
 }
 
 .details span {
   display: block;
   margin-bottom: 0.5rem;
-}
-
-.copyright {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.8rem;
-  color: #666;
 }
